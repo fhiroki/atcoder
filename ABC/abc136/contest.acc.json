@@ -31,7 +31,12 @@
       "id": "abc136_c",
       "label": "C",
       "title": "Build Stairs",
-      "url": "https://atcoder.jp/contests/abc136/tasks/abc136_c"
+      "url": "https://atcoder.jp/contests/abc136/tasks/abc136_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc136_d",
