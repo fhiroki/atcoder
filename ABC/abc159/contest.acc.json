@@ -42,7 +42,12 @@
       "id": "abc159_d",
       "label": "D",
       "title": "Banned K",
-      "url": "https://atcoder.jp/contests/abc159/tasks/abc159_d"
+      "url": "https://atcoder.jp/contests/abc159/tasks/abc159_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc159_e",
