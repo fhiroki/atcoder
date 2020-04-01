@@ -9,7 +9,12 @@
       "id": "abc106_a",
       "label": "A",
       "title": "Garden",
-      "url": "https://atcoder.jp/contests/abc106/tasks/abc106_a"
+      "url": "https://atcoder.jp/contests/abc106/tasks/abc106_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc106_b",
@@ -26,7 +31,12 @@
       "id": "abc106_c",
       "label": "C",
       "title": "To Infinity",
-      "url": "https://atcoder.jp/contests/abc106/tasks/abc106_c"
+      "url": "https://atcoder.jp/contests/abc106/tasks/abc106_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc106_d",
