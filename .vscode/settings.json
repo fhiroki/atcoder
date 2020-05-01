@@ -2,6 +2,7 @@
     "files.associations": {
         "*.mak": "makefile",
         "iostream": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "ostream": "cpp"
     }
 }
