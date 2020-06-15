@@ -6,23 +6,22 @@ using namespace std;
 int main() {
     int x, n;
     cin >> x >> n;
-    int p[n];
-    rep(i, n) cin >> p[i];
-    sort(p, p + n);
+    vector<int> p(102, 0);
+    rep(i, n) {
+        int x;
+        cin >> x;
+        p[x] = 1;
+    }
 
-    int error = 1e5;
     int ans = 0;
-
-    rep(i, 105) {
-        bool ok = true;
-        rep(j, n) if (i == p[j]) ok = false;
-        if (!ok) continue;
+    int minError = 1000;
+    rep(i, 102) {
+        if (p[i] == 1) continue;
 
         int e = abs(i - x);
-
-        if (error > e) {
+        if (e < minError) {
             ans = i;
-            error = e;
+            minError = e;
         }
     }
 
