@@ -9,7 +9,12 @@
       "id": "abc051_a",
       "label": "A",
       "title": "Haiku",
-      "url": "https://atcoder.jp/contests/abc051/tasks/abc051_a"
+      "url": "https://atcoder.jp/contests/abc051/tasks/abc051_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc051_b",
@@ -26,7 +31,12 @@
       "id": "abc051_c",
       "label": "C",
       "title": "Back and Forth",
-      "url": "https://atcoder.jp/contests/abc051/tasks/abc051_c"
+      "url": "https://atcoder.jp/contests/abc051/tasks/abc051_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc051_d",
