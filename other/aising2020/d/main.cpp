@@ -3,50 +3,47 @@
 typedef long long ll;
 using namespace std;
 
+int f(int x) {
+    if (x == 0) return 0;
+    return f(x % __builtin_popcount(x)) + 1;
+}
+
 int main() {
     int n;
     string s;
     cin >> n >> s;
+    vector<int> x(n);
+    rep(i, n) x[i] = s[i] - '0';
 
-    int p = count(s.begin(), s.end(), '1');
-    int rp = 0, rn = 0;
-    for (char c : s) {
-        (rp *= 2) %= (p + 1);
-        if (p > 1) (rn *= 2) %= (p - 1);
-        if (c == '1') {
-            (rp += 1) %= (p + 1);
-            if (p > 1) (rn += 1) %= (p - 1);
+    int p = 0;
+    vector<int> ans(n);
+    rep(i, n) p += x[i];
+
+    rep(b, 2) {
+        int np = p;
+        b == 0 ? np++ : np--;
+        if (np <= 0) continue;
+
+        int r0 = 0;
+        rep(i, n) {
+            r0 = (r0 * 2) % np;
+            r0 += x[i];
         }
-    }
 
-    reverse(s.begin(), s.end());
-    vector<int> ans;
-    int twop = 1, twon = 1;
-
-    rep(i, n) {
-        int r;
-        if (s[i] == '0')
-            r = (rp + twop) % (p + 1);
-        else {
-            if (p == 1) {
-                ans.push_back(0);
-                continue;
+        int k = 1;
+        for (int i = n - 1; i >= 0; i--) {
+            if (x[i] == b) {
+                int r = r0;
+                if (b == 0)
+                    r = (r + k) % np;
+                else
+                    r = (r - k + np) % np;
+                ans[i] = f(r) + 1;
             }
-            r = (rn - twon + p - 1) % (p - 1);
+            k = (k * 2) % np;
         }
-
-        int cnt = 1;
-        while (r > 0) {
-            r %= __builtin_popcount(r);
-            cnt++;
-        }
-        ans.push_back(cnt);
-
-        (twop *= 2) %= (p + 1);
-        if (p > 1) (twon *= 2) %= (p - 1);
     }
 
-    reverse(ans.begin(), ans.end());
-    for (auto x : ans) cout << x << endl;
+    rep(i, n) cout << ans[i] << endl;
     return 0;
 }
