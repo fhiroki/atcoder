@@ -53,12 +53,7 @@
       "id": "abc172_e",
       "label": "E",
       "title": "NEQ",
-      "url": "https://atcoder.jp/contests/abc172/tasks/abc172_e",
-      "directory": {
-        "path": "e",
-        "testdir": "tests",
-        "submit": "main.cpp"
-      }
+      "url": "https://atcoder.jp/contests/abc172/tasks/abc172_e"
     },
     {
       "id": "abc172_f",
