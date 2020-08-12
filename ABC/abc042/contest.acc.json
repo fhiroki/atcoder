@@ -20,13 +20,23 @@
       "id": "abc042_b",
       "label": "B",
       "title": "Iroha Loves Strings (ABC Edition)",
-      "url": "https://atcoder.jp/contests/abc042/tasks/abc042_b"
+      "url": "https://atcoder.jp/contests/abc042/tasks/abc042_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "arc058_a",
       "label": "C",
       "title": "Iroha's Obsession",
-      "url": "https://atcoder.jp/contests/abc042/tasks/arc058_a"
+      "url": "https://atcoder.jp/contests/abc042/tasks/arc058_a",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "arc058_b",

@@ -4,18 +4,12 @@ using namespace std;
 using ll = long long;
 
 int main() {
-    int five = 0, seven = 0;
-    rep(i, 3) {
-        int a;
-        cin >> a;
-        if (a == 5) five++;
-        if (a == 7) seven++;
-    }
+    int a[3];
+    rep(i, 3) cin >> a[i];
 
-    bool ok = false;
-    if (five == 2 && seven == 1) ok = true;
-
-    if (ok) cout << "YES" << endl;
-    else cout << "NO" << endl;
+    if (count(a, a + 3, 5) == 2 && count(a, a + 3, 7) == 1)
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
     return 0;
 }
