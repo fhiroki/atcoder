@@ -53,23 +53,13 @@
       "id": "abc157_e",
       "label": "E",
       "title": "Simple String Queries",
-      "url": "https://atcoder.jp/contests/abc157/tasks/abc157_e",
-      "directory": {
-        "path": "e",
-        "testdir": "tests",
-        "submit": "main.cpp"
-      }
+      "url": "https://atcoder.jp/contests/abc157/tasks/abc157_e"
     },
     {
       "id": "abc157_f",
       "label": "F",
       "title": "Yakiniku Optimization Problem",
-      "url": "https://atcoder.jp/contests/abc157/tasks/abc157_f",
-      "directory": {
-        "path": "f",
-        "testdir": "tests",
-        "submit": "main.cpp"
-      }
+      "url": "https://atcoder.jp/contests/abc157/tasks/abc157_f"
     }
   ]
 }
