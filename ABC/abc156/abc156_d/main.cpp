@@ -1,34 +1,33 @@
 #include <bits/stdc++.h>
+#define rep(i, n) for (int i = 0; i < n; i++)
+typedef long long ll;
 using namespace std;
+const int MOD = 1e9 + 7;
 
-long nCk(long n, long k) {
-    long x = 1, y = 1;
-    for (int i = 0; i < k; i++) {
-        x *= n-i;
-        y *= i+1;
+int power(ll n, ll p) {
+    if (p == 0) return 1;
+    if (p % 2 == 0) {
+        ll t = power(n, p / 2);
+        return t * t % MOD;
     }
-    return x / y;
+    return n * power(n, p - 1) % MOD;
 }
 
-long f(long n) {
-    if (n == 0) return 1;
-    long x = f(n/2);
-    x *= x;
-    if (n%2 == 1) x *= 2;
-    return x;
+int nCr(int n, int r) {
+    ll x = 1, y = 1;
+    rep(i, r) {
+        x = x * (n - i) % MOD;
+        y = y * (i + 1) % MOD;
+    }
+    return x * power(y, MOD - 2) % MOD;
 }
 
 int main() {
-    const int MOD = 1000000007;
-    long n, a, b;
+    ll n, a, b;
     cin >> n >> a >> b;
 
-    long ans = f(n) - 1;
+    ll ans = power(2, n) - 1 - nCr(n, a) - nCr(n, b);
 
-    ans -= nCk(n, a) % MOD;
-    ans -= nCk(n, b) % MOD;
-
-    cout << ans << endl;
+    cout << (ans % MOD + MOD) % MOD << endl;
     return 0;
 }
-
