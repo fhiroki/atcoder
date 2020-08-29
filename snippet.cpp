@@ -42,5 +42,5 @@ struct UnionFind {
         par[x] = y;
     }
 
-    bool save(int x, int y) { return root(x) == root(y); }
+    bool same(int x, int y) { return root(x) == root(y); }
 };
