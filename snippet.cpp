@@ -26,21 +26,34 @@ int nCr(int n, int r) {
 struct UnionFind {
     vector<int> par;
 
-    UnionFind(int n) : par(n) { rep(i, n) par[i] = i; }
+    UnionFind(int n) : par(n, -1) {}
 
     int root(int x) {
-        if (par[x] == x)
+        if (par[x] < 0)
             return x;
         else
-            par[x] = root(par[x]);
+            return par[x] = root(par[x]);
     }
+
+    bool same(int x, int y) { return root(x) == root(y); }
 
     void merge(int x, int y) {
         x = root(x);
         y = root(y);
         if (x == y) return;
-        par[x] = y;
+        if (par[x] > par[y]) swap(x, y);
+        par[x] += par[y];
+        par[y] = x;
     }
 
-    bool same(int x, int y) { return root(x) == root(y); }
+    int size(int x) { return -par[root(x)]; }
 };
+
+bool eratosthenes(int n, int c[]) {
+    for (int i = 2; i < n; i++) {
+        int cnt = 0;
+        for (int j = i; j < n; j += i) cnt += c[i];
+        if (cnt > 1) return true;
+    }
+    return false;
+}

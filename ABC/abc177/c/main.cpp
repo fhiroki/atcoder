@@ -12,9 +12,11 @@ int main() {
 
     ll ans = 0, sum = 0;
     rep(i, n) sum += a[i];
+    sum %= MOD;
+
     rep(i, n - 1) {
         sum -= a[i];
-        sum = (sum % MOD + MOD) % MOD;
+        if (sum < 0) sum += MOD;
         ans = (ans + a[i] * sum) % MOD;
     }
 
