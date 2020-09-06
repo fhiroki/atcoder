@@ -20,7 +20,12 @@
       "id": "tdpc_game",
       "label": "B",
       "title": "ゲーム",
-      "url": "https://atcoder.jp/contests/tdpc/tasks/tdpc_game"
+      "url": "https://atcoder.jp/contests/tdpc/tasks/tdpc_game",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "tdpc_tournament",
