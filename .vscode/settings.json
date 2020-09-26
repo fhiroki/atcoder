@@ -95,7 +95,9 @@
         "span": "cpp",
         "stack": "cpp",
         "stop_token": "cpp",
-        "version": "cpp"
+        "version": "cpp",
+        "all": "cpp",
+        "fenwicktree": "cpp"
     },
     "cSpell.enabled": false
 }
