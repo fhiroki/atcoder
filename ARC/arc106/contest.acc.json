@@ -20,7 +20,12 @@
       "id": "arc106_b",
       "label": "B",
       "title": "Values",
-      "url": "https://atcoder.jp/contests/arc106/tasks/arc106_b"
+      "url": "https://atcoder.jp/contests/arc106/tasks/arc106_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "arc106_c",
