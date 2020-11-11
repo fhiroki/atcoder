@@ -20,7 +20,12 @@
       "id": "arc107_b",
       "label": "B",
       "title": "Quadruple",
-      "url": "https://atcoder.jp/contests/arc107/tasks/arc107_b"
+      "url": "https://atcoder.jp/contests/arc107/tasks/arc107_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "arc107_c",
