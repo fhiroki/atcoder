@@ -20,7 +20,12 @@
       "id": "arc109_b",
       "label": "B",
       "title": "log",
-      "url": "https://atcoder.jp/contests/arc109/tasks/arc109_b"
+      "url": "https://atcoder.jp/contests/arc109/tasks/arc109_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "arc109_c",
