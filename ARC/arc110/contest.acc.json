@@ -20,7 +20,12 @@
       "id": "arc110_b",
       "label": "B",
       "title": "Many 110",
-      "url": "https://atcoder.jp/contests/arc110/tasks/arc110_b"
+      "url": "https://atcoder.jp/contests/arc110/tasks/arc110_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "arc110_c",
