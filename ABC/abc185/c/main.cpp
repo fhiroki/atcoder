@@ -5,10 +5,11 @@ typedef long long ll;
 using namespace std;
 
 int main() {
-    int n;
-    cin >> n;
+    int l;
+    cin >> l;
 
-    int ans = 0;
+    ll ans = 1;
+    for (int i = 1; i < 12; i++) ans = ans * (l - i) / i;
 
     cout << ans << endl;
     return 0;
